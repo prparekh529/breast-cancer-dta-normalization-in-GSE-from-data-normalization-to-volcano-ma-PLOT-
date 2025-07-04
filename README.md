@@ -12,13 +12,13 @@ gse <- getGEO("GSE42568", GSEMatrix = TRUE)
 metadata <- pData(gse[[1]])
 expression_data <- exprs(gse[[1]])
 
-png(file = file.path("______/GSe42568/boxplot_before_normalization.png"))
+png(("______/GSe42568/boxplot_before_normalization.png"))
 boxplot(expression_data, main = "Before Normalization", las = 2, outline = FALSE)
 dev.off()
 
 expression_data <- normalizeBetweenArrays(expression_data, method = "quantile")
 
-png((file=file.path(_______/GSE42568/boxplot_after_normalization.png"))
+png(("_______/GSE42568/boxplot_after_normalization.png"))
 boxplot(expression_data, main = "After Normalization", las = 2, outline = FALSE)
 dev.off()
 library(GEOquery)
@@ -112,7 +112,7 @@ dir.create("C:/Users/_________", showWarnings = FALSE)
 # Save the expression matrix as a CSV
 write.csv(expr_matrix, "C:/Users/____________/GSE42568_expr_matrix.csv")
 # 1. Load the expression matrix (skip this if already loaded)
-expr_matrix <- read.csv("C:/Users/DELL/GSE42568/GSE42568_expr_matrix.csv", row.names = 1)
+expr_matrix <- read.csv("C:/Users/__________/GSE42568_expr_matrix.csv", row.names = 1)
 
 # 2. Log-transform if not already normalized
 expr_matrix <- log2(expr_matrix + 1)
